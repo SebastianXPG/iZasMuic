@@ -14,42 +14,17 @@ export async function createProd(req, res) {
   }
   res.status(201).json(documento);
 }
-//     const producto =req.body.producto
-//     let documento
-//     try{
-//         documento = await prodModel.create(producto)        
-//     } catch(error) {
-//         res.status(400).json(error.message)
-//         return;  
-//     }
-//     res.status(201).json(documento)  
-// }
-
-
 
 
 //READ
-// export async function readProd(req, res) {
-//   const nompro = req.params.nompro;
-//   let documento;
-//   try {
-//     documento = await prodModel.find({ nompro: nompro });
-//   } catch (error) {
-//     res.status(400).json(error.message);
-//     return;
-//   }
-//   res.status(200).json(documento);
-// }
-
  export async function readProd(req, res){
-     const { nompro } = req.params
+     const { nompro } = req; 
 
      try {
          const documents = await prodModel.find({
              $or: [
                  { codpro: nompro },
-                 { nompro: nompro }
-             ]
+                 { nompro: nompro }],
          })
          res.status(200).json(documents)
      } catch (error) {
@@ -57,17 +32,6 @@ export async function createProd(req, res) {
      }
  }
 
-
-//         const id = req.params.id
-//     let documento
-//     try {
-//         documento = await prodModel.find({"_id":id})
-//     } catch (error) {
-//         res.status(400).json(error.message)
-//         return ;        
-//     }
-//     res.status(200).json(documento)
-// }
 
 //UPDATE
 export async function updateProd(req, res){
