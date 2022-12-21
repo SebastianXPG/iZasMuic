@@ -44,8 +44,52 @@
     0 0,
     0 0
   );
+
+  
 }
 
-.container .ti {
-  color: rgb(11, 248, 3);
+.container .ta {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: -1%;
 }
+
+.container .ra {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: right;
+  margin-top: -2%;
+}
+
+
+
+.container .te{
+  color: black;
+  font-weight: 600;
+  margin-top: 5%;
+}
+
+
+.container .ti{
+  color: black;
+  font-weight: 600;
+  margin-top: 1%;
+}
+
+.container .re{
+  color: black;
+  font-weight: 600;
+  margin-top: 5%;
+  text-align: right;
+  margin-top: -4%;
+}
+
+
+.container .ri{
+  color: black;
+  font-weight: 600;
+  margin-top: 1%;
+  text-align: right;
+}
+
+
