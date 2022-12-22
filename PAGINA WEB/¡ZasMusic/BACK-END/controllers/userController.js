@@ -16,9 +16,26 @@ export async function createUser(req, res) {
     res.status(400).json(error.message);
   }
 }
+ 
+//READ
+export async function readUser(req, res) {
+//export async function readProd(req, res){
+     const { nompro } = req; 
+     try {
+         const documents = await prodModel.find({
+             $or: [
+                 { codpro: nompro },
+                 { nompro: nompro }],
+         })
+         res.status(200).json(documents)
+     } catch (error) {
+         res.status(400).json(error.message)
+     }
+ }
 
-export function getUser(req, res) {}
 
+
+ 
 export function updateUser(req, res) {}
 
 export function deleteUser(req, res) {}

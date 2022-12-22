@@ -1,8 +1,8 @@
 
 import cors from "cors"
-import dotenv from "dotenv";
-import express from "express"
-import mongoose from "mongoose"
+import dotenv from "dotenv"
+import express from "express";
+import mongoose from "mongoose";
 import apiRouter from "./routes/apiRouter.js"
 
 const app = express();

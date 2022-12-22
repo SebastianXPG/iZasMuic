@@ -3,31 +3,38 @@ import { createProd, deleteProd, readProd, updateProd } from "../controllers/pro
 
 const prodRouter = express.Router()
 
-//CRUD
-//CREAR: POST
-prodRouter.post("/", (req, res) => {
-    createProd(req, res)
-})
+prodRouter.post("/", validatePassword, createProd);
+prodRouter.get("/", validatePassword, readProd);
+prodRouter.patch("/", validatePassword, updateProd);
+prodRouter.delete("/", validatePassword, deleteProd);
 
-//LEER: GET
-prodRouter.get("/:nompro", (req, res) => {
-    readProd(req, res)
-})
+
+
+// //CRUD
+// //CREAR: POST
+// prodRouter.post("/", (req, res) => {
+//     createProd(req, res)
+// })
 
 // //LEER: GET
-// prodRouter.get("/:id", (req, res) => {
+// prodRouter.get("/:nompro", (req, res) => {
 //     readProd(req, res)
 // })
 
-//ACTUALIZAR: PUT / PATCH
-prodRouter.patch("/:id", (req, res) => {
-    updateProd(req, res)
-})
+// // //LEER: GET
+// // prodRouter.get("/:id", (req, res) => {
+// //     readProd(req, res)
+// // })
 
-//ELIMINAR: DELETE
-prodRouter.delete("/", (req, res) => {
-    deleteProd(req, res)
-})
+// //ACTUALIZAR: PUT / PATCH
+// prodRouter.patch("/:id", (req, res) => {
+//     updateProd(req, res)
+// })
+
+// //ELIMINAR: DELETE
+// prodRouter.delete("/", (req, res) => {
+//     deleteProd(req, res)
+// })
 
 export default prodRouter
 

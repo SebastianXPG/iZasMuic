@@ -3,16 +3,16 @@ import express from "express"
 
 //  import { createUser, deleteUser, readUser, updateUser, userList } from "../controllers/userController.js"
 //   import { createUser, deleteUser, getUser, updateUser, } from "../controllers/userController.js";
-import { createUser, deleteUser, getUser, updateUser, } from "../controllers/userController.js";
+import { createUser, deleteUser, readUser, updateUser, } from "../controllers/userController.js";
 
 import validatePassword from "../middlewares/validatePassword.js";
 
 const userRouter = express.Router();
 
 userRouter.post("/", validatePassword, createUser);
-userRouter.get("/", getUser);
-userRouter.patch("/", updateUser);
-userRouter.delete("/", deleteUser);
+userRouter.get("/", validatePassword, readUser);
+userRouter.patch("/", validatePassword, updateUser);
+userRouter.delete("/", validatePassword, deleteUser);
 
 
 

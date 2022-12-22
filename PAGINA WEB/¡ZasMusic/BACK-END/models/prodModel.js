@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// const prodModel = mongoose.Schema({
+//  const prodModel = mongoose.Schema({
 //     "cod_producto":{type:String,required:true,minlength:2,maxlength:10},
 //     "nom_producto":{type:String,required:true,maxlength:30},
 //     "cantidad":{type:Number,required:true,min:0,max:100000},

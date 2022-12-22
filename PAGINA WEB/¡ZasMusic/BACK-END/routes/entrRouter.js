@@ -3,26 +3,27 @@ import { createEntr, deleteEntr, readEntr, updateEntr } from "../controllers/ent
 
 const entrRouter = express.Router()
 
-//CRUD
-//CREAR: POST
-entrRouter.post("/", (req, res) => {
-    createEntr(req, res)
-})
 
-//LEER: GET
-entrRouter.get("/:id", (req, res) => {
-    readEntr(req, res)
-})
+// //CRUD
+// //CREAR: POST
+// entrRouter.post("/", (req, res) => {
+//     createEntr(req, res)
+// })
 
-//ACTUALIZAR: PUT / PATCH
-entrRouter.patch("/:id", (req, res) => {
-    updateEntr(req, res)
-})
+// //LEER: GET
+// entrRouter.get("/:id", (req, res) => {
+//     readEntr(req, res)
+// })
 
-//ELIMINAR: DELETE
-entrRouter.delete("/", (req, res) => {
-    deleteEntr(req, res)
-})
+// //ACTUALIZAR: PUT / PATCH
+// entrRouter.patch("/:id", (req, res) => {
+//     updateEntr(req, res)
+// })
+
+// //ELIMINAR: DELETE
+// entrRouter.delete("/", (req, res) => {
+//     deleteEntr(req, res)
+// })
 
 export default entrRouter
 
