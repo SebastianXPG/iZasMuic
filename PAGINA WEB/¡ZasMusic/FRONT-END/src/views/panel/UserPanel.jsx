@@ -1,17 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useCookies } from "react-cookie"
+import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import TokenContext from "../../contexts/TokenContext";
 import UserContext from "../../contexts/UserContext";
 import { getTransactions } from "../../services/transactionService";
-import Transaction from "./Transaction";
 
 import "./UserPanel.css";
 
 function UserPanel() {
   const { user } = useContext(UserContext);
   const { token } = useContext(TokenContext);
-  
+
   const [cookies, setCookies] = useCookies(["token", "User"]);
 
   const currentUser = user ? user : cookies.user;

@@ -4,9 +4,9 @@ import "./home.css"
 
 
 // @ts-ignore
-// import illustration from "../../assets/home_illustration.png"
 
-// import GridColumn from '../../components/GridColumn';
+
+
 import { Link } from 'react-router-dom';
 
 function Home() {

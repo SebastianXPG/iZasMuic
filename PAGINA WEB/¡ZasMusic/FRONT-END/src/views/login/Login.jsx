@@ -15,21 +15,19 @@ function Login() {
   const { setToken } = useContext(TokenContext);
   const [userInput, setUserInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
-  const [cookies, setCookies] = useCookies(["token", "user"]);
+  const [setCookies] = useCookies(["token", "user"]);
 
   const navigate = useNavigate();
 
   async function onButtonClick(event) {
     event.preventDefault();
-    console.log(userInput + " " + passwordInput);
+   
     const token = await login(userInput, passwordInput);
-    console.log(token);
+    
     if (token) {
       setUser(userInput);
       setToken(token);
-      //Cookies
-      //  setCookies("token",token,{path:"/", maxAge(0): 7*24*60*60})
-      //  setCookies("token",userInput,{path:"/", maxAge(0)})
+  
       setCookies("token", token, { path: "/" });
       setCookies("token", userInput, { path: "/" });
       navigate("/panel");

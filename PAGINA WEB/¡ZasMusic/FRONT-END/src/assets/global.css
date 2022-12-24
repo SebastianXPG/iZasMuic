@@ -47,17 +47,6 @@ h1 {
     display: inline-flex;
 }
 
-/* .grid {
-    display: grid;
-}
-
-.grid-col-span-2 {
-    grid-column: span 2;
-}
-
-.grid-col-span-3 {
-    grid-column: span 3;
-} */
 
 .container {
     max-width: 100rem;
